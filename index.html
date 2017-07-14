@@ -16,6 +16,25 @@
 			<h1>Completly Random Quiz</h1>
 			<p>These quesions are pretty out there but lets see if you can guess the answers. Do it fast because there is a timer.</p>
 		</div>
+		<div class="col-lg-3">
+			<div class="panel panel-default">
+  				<div class="panel-heading">Seconds Left Timer</div>
+  					<div class="panel-body">
+    					<div id="show-number"></div>
+    					<div id="time-left"></div>
+  					</div>
+  					<button class="btn-success btn-lg center-block" id="start-button" onclick="run();">Start!</button><br>
+			</div>
+		</div>
+		<div class="col-lg-3" id="after-submit">
+			<div class="panel panel-default">
+  				<div class="panel-heading">You finished.</div>
+  					<div class="panel-body">
+    					<p id="number-correct"></p>
+    					<p id="message"></p>
+  					</div>
+			</div>
+		</div>
 		<div class="col-lg-9" id="questions">
 			<div class="panel panel-default">
 				<div class="panel-heading">Questions:</div>
@@ -26,54 +45,42 @@
 								<input type="radio" name="question1" value="Handel"> Handel <br>
 								<input type="radio" name="question1" value="Baton" class="correct"> Baton *<br>
 								<input type="radio" name="question1" value="Torch"> Tourch <br>
+								<br>
 							<p>Who is Reginald Kenneth Dwight otherwise known as?</p>
 								<input type="radio" name="question2" value="The King of England"> The King of England <br>
 								<input type="radio" name="question2" value="Rafael Nadal"> Rafael Nadal <br>
 								<input type="radio" name="question2" value="Emmanuel Macron"> Emmanuel Macron <br>
 								<input type="radio" name="question2" value="Elton John" class="correct"> Elton John *<br>
+								<br>
 							<p>Which politician was given the nickname Tarzan?</p>
 								<input type="radio" name="question3" value="Al Franken"> Al Franken <br>
 								<input type="radio" name="question3" value="Michael Heseltine" class="correct"> Michael Heseltine *<br>
 								<input type="radio" name="question3" value="Alan Greenspan"> Alan Greenspan <br>
 								<input type="radio" name="question3" value="Adam Rickitt"> Adam Rickitt <br>
+								<br>
 							<p>How many players are in the water for each team in a water polo game?</p>
 								<input type="radio" name="question4" value="4"> 4 <br>
 								<input type="radio" name="question4" value="5"> 5 <br>
 								<input type="radio" name="question4" value="6"> 6 <br>
 								<input type="radio" name="question4" value="7" class="correct"> 7 *<br>
+								<br>
 							<p>An onomastician studies what?</p>
 								<input type="radio" name="question5" value="Names" class="correct"> Names *<br>
 								<input type="radio" name="question5" value="Birds"> Birds <br>
 								<input type="radio" name="question5" value="Eggs"> Eggs <br>
 								<input type="radio" name="question5" value="Clouds"> Clouds <br>
+								<br>
 							<p>What is Barbie's last name?</p>
 								<input type="radio" name="question6" value="Smith"> Smith <br>
 								<input type="radio" name="question6" value="Roberts" class="correct"> Roberts *<br>
 								<input type="radio" name="question6" value="Johnson"> Johnson <br>
 								<input type="radio" name="question6" value="Davis"> Davis <br>
-							<input id="finished" class="btn-danger btn-lg center-block" type="button" value="I'm Done!" name="submitAnswerButton" onclick="stop();">
+							<input id="finished" class="btn-danger btn-lg center-block" type="button" value="I'm Done!" name="submitAnswerButton" onclick="check();">
 						</form>
 					</div>
 			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-default">
-  				<div class="panel-heading">Seconds Left Timer</div>
-  					<div class="panel-body">
-    					<div id="show-number"></div>
-    					<div id="time-left"></div>
-  					</div>
-  					<button class="btn-success btn-lg center-block" id="start-button" onclick="check();">Start!</button><br>
-			</div>
-		</div>
-		<div class="col-lg-3" id="after-submit">
-			<div class="panel panel-default">
-  				<div class="panel-heading">You finished. Good Job!</div>
-  					<div class="panel-body">
-    					<p id="number-correct">___</p>
-  					</div>
-			</div>
-		</div>
+		
+		
 		
 	</div>
 	

@@ -40,11 +40,10 @@ function decrement() {
       alert("Time Up!");
     }
 }
-function stop() {
+function check() {
   clearInterval(intervalId);
   intervalId = undefined;
-}
-function check(){
+  document.getElementById("after-submit").style.visibility = "visible";
   var quetsion1 = document.quiz.quetsion1.value;
   var quetsion2 = document.quiz.quetsion1.value;
   var quetsion3 = document.quiz.quetsion1.value;
@@ -71,10 +70,22 @@ function check(){
   if (question6 == "Roberts") {
     correct++;
   }
-document.getElementById("after-submit").style.visibility = "visible";
-document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";
-stop();
 
+var messages = ["Great Job!", "You did OK.", "OUCH!"]
+
+var range;
+  if (correct < 1) {
+    range=2;
+  }
+  if (correct > 1 && correct < 4) {
+    range = 1;
+  }
+  if (correct > 4) {
+    range = 0;
+  }
+document.getElementById("after-submit").style.visibility = "visible";
+document.getElementById("message").innerHTML=messages[range];
+document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";
 }
 
   // alert("Your Results");
@@ -86,6 +97,7 @@ $('#start-button').on("click", function(){
 });
 $('#finished').on("click", function(){
   stop();
+  check();
 });
 
 //End document.ready
