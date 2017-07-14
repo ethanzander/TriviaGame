@@ -1,5 +1,15 @@
-
-
+#show-number{
+	text-align: center;
+}
+.btn-success{
+	width: 50%;
+}
+.btn-danger{
+	width: 50%;
+}
+.correct{
+	color: black;
+}
 
 /* For desktop: */
 .col-1 {width: 8.33%;}
