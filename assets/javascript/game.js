@@ -11,11 +11,11 @@ var intervalId;
 
 //Set all Functions
 
-function tenSeconds() {
-	if (number === 10) {
-  		$('#time-left').html("<h3>You have 10 seconds left!</h3>");
-  	}
-}
+// function tenSeconds() {
+// 	if (number === 10) {
+//   		$('#time-left').html("<h3>You have 10 seconds left!</h3>");
+//   	}
+// }
 // function fiveSeconds() {
 // 	if (number === 5) {}
 //   		$('#time-left').html("<h3>You have 5 seconds left!</h3>");
@@ -29,7 +29,8 @@ function tenSeconds() {
 function run() {
   if (!intervalId) {
     intervalId = setInterval(decrement, 1000);
-  }
+  };
+  document.getElementById("questions").style.visibility = "visible";
 }
 function decrement() {
   number--;
@@ -42,6 +43,38 @@ function decrement() {
 function stop() {
   clearInterval(intervalId);
   intervalId = undefined;
+}
+function check(){
+  var quetsion1 = document.quiz.quetsion1.value;
+  var quetsion2 = document.quiz.quetsion1.value;
+  var quetsion3 = document.quiz.quetsion1.value;
+  var quetsion4 = document.quiz.quetsion1.value;
+  var quetsion5 = document.quiz.quetsion1.value;
+  var quetsion6 = document.quiz.quetsion1.value;
+  var correct = 0;
+
+  if (quetsion1 == "Baton") {
+    correct++;
+  }
+  if (question2 == "Elton John") {
+    correct++;
+  }
+  if (question3 == "Michael Heseltine") {
+    correct++;
+  }
+  if (quetsion4 == "7") {
+    correct++;
+  }
+  if (question5 == "Names") {
+    correct++;
+  }
+  if (question6 == "Roberts") {
+    correct++;
+  }
+document.getElementById("after-submit").style.visibility = "visible";
+document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";
+stop();
+
 }
 
   // alert("Your Results");

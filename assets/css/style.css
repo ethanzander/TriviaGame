@@ -1,14 +1,21 @@
 #show-number{
 	text-align: center;
 }
+#questions{
+	visibility: hidden;
+}
+#after-submit{
+	visibility: hidden;
+}
 .btn-success{
 	width: 50%;
 }
 .btn-danger{
-	width: 50%;
+	
 }
 .correct{
-	color: black;
+	color: red;
+	text-decoration: 
 }
 
 /* For desktop: */
